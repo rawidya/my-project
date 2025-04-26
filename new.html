@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rawidya Portfolio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div class="container">
+    <video autoplay loop muted playsinline class="background-clip">
+      <source src="ASSETS/arle (2).mp4" type="video/mp4">
+    </video>
+
+    
+    <header>
+      <a href="#" class="logo">Rawidya</a>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#degree">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <script>
+        // Fungsi untuk memeriksa apakah elemen berada dalam tampilan (viewport)
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        // Menambahkan kelas 'visible' jika elemen sudah masuk tampilan
+        function handleScroll() {
+            const skillsGrid = document.querySelector('.skills-grid');
+            const projectsGrid = document.querySelector('.projects-grid');
+    
+            if (isElementInViewport(skillsGrid)) {
+                skillsGrid.classList.add('visible');
+            }
+    
+            if (isElementInViewport(projectsGrid)) {
+                projectsGrid.classList.add('visible');
+            }
+        }
+    
+        // Panggil fungsi handleScroll saat halaman digulir
+        window.addEventListener('scroll', handleScroll);
+        
+        // Panggil handleScroll sekali ketika halaman pertama kali dimuat
+        handleScroll();
+    </script>
+    
+    <section class="home" id="home">
+      <div class="home-img">
+        <img src="ASSETS/8cd134e8-6cd8-4ca8-b56f-f5c327efdc69.jpg" alt="Profile Photo">
+      </div>
+
+      <div class="home-content">
+        <h1>Applause, It's me <span>Rama</span></h1>
+        <h3 class="typing-text">I'm a Junior Web Developer<span></span></h3>
+        <p class="address">Pacar kembang Gang III No 89B,Surabaya,Indonesia</p> 
+        <p>Welcome to my world! I'm passionate about software engineering, cybersecurity, and always eager to learn new things.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/rawidyadhana/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <a href="#" class="btn">Hire Me</a>
+      </div>
+    </section>
+
+    
+    <section class="section" id="degree">
+      <h2>Education</h2>
+      <div class="content">
+        <h3>Degree: X RPL 2 - Software Engineering</h3>
+        <p><strong>School:</strong> SMKN 1 Surabaya | <em>Didn't graduate yet</em></p>
+      </div>
+    </section>
+
+    
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="content skills-grid">
+        <div class="skill-item">HTML5 & CSS3</div>
+        <div class="skill-item">JavaScript Basics</div>
+        <div class="skill-item">Responsive Design</div>
+        <div class="skill-item">Cybersecurity Fundamentals</div>
+        <div class="skill-item">Python Beginner</div>
+        <div class="skill-item">Linux Navigation</div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="content projects-grid">
+        <div class="project-card">
+          <h3>Personal Portfolio Website</h3>
+          <p>A responsive portfolio website built using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project-card">
+          <h3>Simple Login System</h3>
+          <p>A basic login authentication system using Python and SQLite.</p>
+        </div>
+        <div class="project-card">
+          <h3>Cybersecurity CTF Challenges</h3>
+          <p>Participated in Capture The Flag (CTF) competitions solving security puzzles and exploiting vulnerabilities.</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="content">
+        <p>Feel free to reach out to me via Instagram or LinkedIn!</p>
+        <a href="https://www.instagram.com/rawidyadhana/" class="btn">Contact Me</a>
+      </div>
+    </section>
+  </div> 
+
+</body>
+</html>
