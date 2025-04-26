@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+.address {
+    font-size: 1.2rem;
+    color: #00FFFF; 
+    margin-top: 10px;
+}
+
+  .background-clip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  
+  .container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  nav a {
+    color: #ccc;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+  }
+  
+  nav a:hover, nav a.active {
+    color: #00FFFF;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 50px;
+    min-height: 100vh;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .home-img img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00FFFF;
+    margin-bottom: 20px;
+  }
+  
+  .home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .home-content h3 {
+    font-size: 1.5rem;
+    color: #00FFFF;
+    margin-bottom: 20px;
+  }
+  
+  .home-content p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: #ccc;
+    font-size: 1.5rem;
+  }
+  
+  .social-icons a:hover {
+    color: #00FFFF;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: #00FFFF;
+    color: #111;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    background: #07556d;
+  }
+  
+  
+  section {
+    padding: 100px 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Darker background with contrast */
+    color: #fff;
+    position: relative;
+  }
+  
+  section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    z-index: -1;
+  }
+  
+  .section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #00FFFF; /* Accent color */
+  }
+  
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .skill-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00FFFF;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+  }
+  
+  .skill-item:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Projects */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+  }
+  
+  .project-card:hover {
+    background: rgba(0, 10, 10, 0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+    
+    .home {
+      flex-direction: column;
+    }
+  }
+  
+  /* Default state (hidden) for Skills and Projects */
+.skills-grid, .projects-grid {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* State when the element is visible */
+.skills-grid.visible, .projects-grid.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
