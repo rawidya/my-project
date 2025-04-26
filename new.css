@@ -129,7 +129,7 @@
   section {
     padding: 100px 50px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.6); /* Darker background with contrast */
     color: #fff;
     position: relative;
   }
@@ -141,14 +141,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
     z-index: -1;
   }
   
   .section h2 {
     font-size: 2.2rem;
     margin-bottom: 40px;
-    color: #00FFFF; 
+    color: #00FFFF; /* Accent color */
   }
   
   .content {
@@ -157,7 +157,7 @@
     line-height: 1.6;
   }
   
- 
+  /* Skills */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -177,7 +177,7 @@
     background: rgba(0, 0, 0, 0.2);
   }
   
- 
+  /* Projects */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -197,7 +197,7 @@
     background: rgba(0, 10, 10, 0.2);
   }
   
-
+  /* Responsive */
   @media (max-width: 768px) {
     header {
       flex-direction: column;
@@ -208,14 +208,14 @@
     }
   }
   
-
+  /* Default state (hidden) for Skills and Projects */
 .skills-grid, .projects-grid {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-
+/* State when the element is visible */
 .skills-grid.visible, .projects-grid.visible {
     opacity: 1;
     transform: translateY(0);
